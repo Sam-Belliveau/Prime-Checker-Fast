@@ -17,6 +17,11 @@ void prime(long long int number) {
 	const long long int lim = sqrt(number);
 
 	// Gets 2 and 3 out of the way
+	if (number == 1) { cout << number << " is hard to classify. \n";  return; }
+	if (number == 2) { cout << number << " is Prime. \n";  return; }
+	if (number == 3) { cout << number << " is Prime. \n";  return; }
+
+	// Tests Odd Ball Factors
 	if (number % 2 == 0) { cout << number << " is not Prime. \n";  return; }
 	if (number % 3 == 0) { cout << number << " is not Prime. \n";  return; }
 
@@ -24,7 +29,8 @@ void prime(long long int number) {
 		if (number % i == 0) { cout << number << " is not Prime. \n";  return; }
 		// Tests Number
 		i = i + w; // Increments number
-		w = 6 - i; // We already tested 2 and 3, so we can remove multiples of it
+		w = 6 - i; // We already tested 2 and 3
+		// So this removes testing multepules of this
 	}
 	cout << number << " is Prime. \n"; return;
 }

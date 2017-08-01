@@ -18,7 +18,6 @@ void prime(long long int number) {
 		// Tests Number
 		i = i + w; // Increments number
 		w = 6 - i; // We already tested 2 and 3
-		// So this removes testing multepules of this
 	}
 	cout << number << " is Prime. \n"; return;
 }
